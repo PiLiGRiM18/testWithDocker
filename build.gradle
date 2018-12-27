@@ -12,6 +12,9 @@ plugins {
     id "io.qameta.allure" version "2.5"
 }
 
+apply plugin: 'java'
+apply plugin: 'io.qameta.allure'
+
 group 'testWithDocker'
 version '1.0-SNAPSHOT'
 
@@ -19,6 +22,19 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+allure {
+    autoconfigure = true
+    version = '2.+'
+
+    useJUnit4 {
+        version = '2.+'
+    }
+}
+
+test {
+    useJUnit()
 }
 
 dependencies {
@@ -56,23 +72,15 @@ dependencies {
     compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.+'
 
     // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-junit-adaptor
-//    testCompile group: 'ru.yandex.qatools.allure', name: 'allure-junit-adaptor', version: '1.+'
+    testCompile group: 'ru.yandex.qatools.allure', name: 'allure-junit-adaptor', version: '1.+'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
+    compile group: 'io.cucumber', name: 'cucumber-java8', version: '4.+'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.+'
 
     // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-maven-plugin
 //    compile group: 'ru.yandex.qatools.allure', name: 'allure-maven-plugin', version: '2.+'
 
-}
-
-//apply plugin: 'io.qameta.allure'
-
-allure {
-    autoconfigure = true
-    version = '2.4.1'
-
-    resultsDir = file('build/test-results/allure-report')
-    reportDir = file('build/test-results/allure-results')
-
-    useJUnit4 {
-        version = '2.+'
-    }
 }

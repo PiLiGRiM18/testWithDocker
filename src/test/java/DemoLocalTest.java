@@ -20,6 +20,7 @@ public class DemoLocalTest extends BaseLocalTest {
     public void test() {
 
         open("https://www.wikipedia.org/");
+
         step1();
         try {
             TimeUnit.SECONDS.sleep(5);

@@ -21,7 +21,7 @@ public class BaseDockerTest {
     @ClassRule
     public static BrowserWebDriverContainer chrome = new BrowserWebDriverContainer()
             .withCapabilities(new ChromeOptions())
-            .withRecordingMode(RECORD_ALL, new File("build/video-test-results"))
+//            .withRecordingMode(RECORD_ALL, new File("build/video-test-results"))
             ;
     static RemoteWebDriver driver;
 

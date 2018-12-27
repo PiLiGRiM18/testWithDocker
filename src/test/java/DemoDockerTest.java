@@ -20,11 +20,11 @@ public class DemoDockerTest extends BaseDockerTest {
 
         $(byXpath("//*[@id=\"searchInput\"]")).sendKeys("жопа");
 
-        timeout(2);
+//        timeout(2);
 
         $(byXpath("//*[@id=\"search-form\"]/fieldset/button")).click();
 
-        timeout(5);
+//        timeout(5);
 
         assertThat(searchInput != null).isTrue();
         assertThat(searchInput.size() > 0).isTrue();
