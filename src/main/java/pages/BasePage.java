@@ -20,8 +20,7 @@ public class BasePage implements MyProgectPage {
 
     @Step
     public SelenideElement getElementByText(String text) {
-        SelenideElement element = $(byText(text));
-        return element;
+        return $(byText(text));
     }
 
     @Step
