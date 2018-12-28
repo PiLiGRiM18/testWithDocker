@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -17,6 +18,6 @@ public class WikipediaPage extends BasePage {
         ElementsCollection searchInput = $$(byName("search"));
         assertThat(searchInput != null).isTrue();
         assertThat(searchInput.size() > 0).isTrue();
-        throw new cucumber.api.PendingException();
+        sleep(10000);
     }
 }
