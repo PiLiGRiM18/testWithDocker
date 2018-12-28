@@ -93,7 +93,7 @@ dependencies {
     // https://mvnrepository.com/artifact/info.cukes/gherkin
     compile group: 'info.cukes', name: 'gherkin', version: '2.+'
 
-    // https://mvnrepository.com/artifact/io.cucumber/pro-plugin
-    compile group: 'io.cucumber', name: 'pro-plugin', version: '2.0.4'
+    // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-cucumber-jvm-adaptor
+    compile group: 'ru.yandex.qatools.allure', name: 'allure-cucumber-jvm-adaptor', version: '1.6.4'
 
 }
