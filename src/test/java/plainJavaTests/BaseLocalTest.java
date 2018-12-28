@@ -1,3 +1,5 @@
+package plainJavaTests;
+
 import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;

@@ -1,3 +1,5 @@
+package plainJavaTests;
+
 import com.codeborne.selenide.ElementsCollection;
 import org.junit.Test;
 
@@ -15,11 +17,12 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class DemoLocalTest extends BaseLocalTest {
 
-//    @RunWith()
+    //    @RunWith()
     @Test
     public void test() {
 
         open("https://www.wikipedia.org/");
+
         step1();
         try {
             TimeUnit.SECONDS.sleep(5);

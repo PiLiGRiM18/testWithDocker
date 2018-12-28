@@ -43,7 +43,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
 
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
-    testCompile("org.assertj:assertj-core:3.+")
+    compile("org.assertj:assertj-core:3.+")
 
     // https://mvnrepository.com/artifact/org.testcontainers/selenium
     testImplementation group: 'org.testcontainers', name: 'selenium', version: '1.+'
@@ -69,10 +69,17 @@ dependencies {
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
 
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide
     compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.+'
 
     // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-junit-adaptor
     testCompile group: 'ru.yandex.qatools.allure', name: 'allure-junit-adaptor', version: '1.+'
+
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4
+    testCompile group: 'io.qameta.allure', name: 'allure-junit4', version: '2.+'
+
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber2-jvm
+    compile group: 'io.qameta.allure', name: 'allure-cucumber2-jvm', version: '2.+'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
     compile group: 'io.cucumber', name: 'cucumber-java8', version: '4.+'
@@ -80,7 +87,9 @@ dependencies {
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.+'
 
-    // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-maven-plugin
-//    compile group: 'ru.yandex.qatools.allure', name: 'allure-maven-plugin', version: '2.+'
+    // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
+    compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.+'
 
+    // https://mvnrepository.com/artifact/info.cukes/gherkin
+    compile group: 'info.cukes', name: 'gherkin', version: '2.+'
 }

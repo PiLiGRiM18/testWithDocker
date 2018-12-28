@@ -1,3 +1,5 @@
+package plainJavaTests;
+
 import com.codeborne.selenide.ElementsCollection;
 import org.junit.Test;
 
