@@ -1,7 +1,6 @@
 package pages;
 
 import com.codeborne.selenide.ElementsCollection;
-import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.$$;
@@ -13,11 +12,10 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class WikipediaPage extends BasePage {
 
-    @Step
     public void checkResultsIsShown() {
         ElementsCollection searchInput = $$(byName("search"));
         assertThat(searchInput != null).isTrue();
         assertThat(searchInput.size() > 0).isTrue();
-        sleep(10000);
+        sleep(2000);
     }
 }

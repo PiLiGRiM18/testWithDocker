@@ -1,7 +1,6 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -13,22 +12,18 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class BasePage implements MyProgectPage {
 
-    @Step
     public void openPage(String url) {
         open(url);
     }
 
-    @Step
     public SelenideElement getElementByText(String text) {
         return $(byText(text));
     }
 
-    @Step
     public void clickElement(String text) {
         getElementByText(text).click();
     }
 
-    @Step
     public void sendKeys(By by, String text) {
         $(by).sendKeys(text);
     }

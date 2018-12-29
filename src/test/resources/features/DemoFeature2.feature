@@ -1,7 +1,7 @@
 @demoTest
 Feature: Demo local feature
 
-  Scenario: Open Wikipedia and search something - 1
+  Scenario: Open Wikipedia and search something - 2
     Given I am on the "Wikipedia" page
     And I type "Жопа" in inputfield with id "searchInput"
     And I press "Search" button

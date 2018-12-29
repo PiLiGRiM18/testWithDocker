@@ -3,8 +3,11 @@ package steps;
 import cucumber.api.java8.En;
 import pages.WikipediaPage;
 
+import java.lang.management.ManagementFactory;
+
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 /**
  * Created by Alexander Pervachuk <apervachuk@wiley.com> on 27.12.2018 16:33
@@ -23,16 +26,33 @@ public class MyStepdefs implements En {
             page.sendKeys(byXpath("//*[@id=\"" + arg1 + "\"]"), arg0);
         });
 
-        And("^I press 'Search\" button$", () -> {
+        And("^I press \"Search\" button$", () -> {
             $(byXpath("//*[@id=\"search-form\"]/fieldset/button")).click();
         });
 
-        Then("^The page is reloaded$", () -> {
-            // todo: write code here
+        Then("^the page is reloaded$", () -> {
+            System.out.println("The page is reloaded");
+
         });
 
-        And("^Search result is shown$", () -> {
+        And("^search result is shown$", () -> {
             page.checkResultsIsShown();
+        });
+
+        And("^the feature is completed$", () -> {
+            System.out.println(">>> The feature is completed <<<" + Thread.currentThread().getId());
+            System.out.println(ManagementFactory.getRuntimeMXBean().getName());
+            sleep(2000);
+        });
+
+        Given("^I am on the \"([^\"]*)\" page$", (String arg0) -> {
+            if (arg0.equalsIgnoreCase("Wikipedia")) {
+                page.openPage("https://www.wikipedia.org/");
+            } else if (arg0.equalsIgnoreCase("Google")) {
+                page.openPage("https://www.google.com/");
+            } else {
+                throw new cucumber.api.PendingException();
+            }
         });
     }
 }
