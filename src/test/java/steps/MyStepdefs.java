@@ -40,6 +40,7 @@ public class MyStepdefs implements En {
         });
 
         And("^the feature is completed$", () -> {
+            Thread thread = Thread.currentThread();
             System.out.println(">>> The feature is completed <<<" + Thread.currentThread().getId());
             System.out.println(ManagementFactory.getRuntimeMXBean().getName());
             sleep(2000);

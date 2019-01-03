@@ -1,19 +1,19 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath "io.qameta.allure:allure-gradle:2.+"
-    }
-}
+//buildscript {
+//    repositories {
+//        jcenter()
+//    }
+//    dependencies {
+//        classpath "io.qameta.allure:allure-gradle:2.+"
+//    }
+//}
 
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.5"
+//    id "io.qameta.allure" version "2.5"
 }
 
 apply plugin: 'java'
-apply plugin: 'io.qameta.allure'
+//apply plugin: 'io.qameta.allure'
 
 group 'testWithDocker'
 version '1.0-SNAPSHOT'
@@ -24,14 +24,16 @@ repositories {
     mavenCentral()
 }
 
-allure {
-    autoconfigure = true
-    version = '2.+'
-
-    useJUnit5 {
-        version = '2.+'
-    }
-}
+//allure {
+//    autoconfigure = true
+////    resultsDir = new File("target/video-test-results")
+////    reportDir = new File("target/video-test-results")
+//    version = '2.+'
+//
+//    useCucumberJVM {
+//        version = '2.+'
+//    }
+//}
 
 test {
     useJUnitPlatform()
@@ -40,7 +42,7 @@ test {
 
 dependencies {
     // https://mvnrepository.com/artifact/junit/junit
-//    testCompile group: 'junit', name: 'junit', version: '4.+'
+    // testCompile group: 'junit', name: 'junit', version: '4.+'
 
     // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
     testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.+'
@@ -69,28 +71,16 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.+'
 
     // https://mvnrepository.com/artifact/com.codeborne/selenide
-    compile group: 'com.codeborne', name: 'selenide', version: '5.1.0'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.+'
 
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3+'
 
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.+'
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm
+//    compile group: 'io.qameta.allure', name: 'allure-cucumber3-jvm', version: '2.+'
 
-    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
-    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
-
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide
-    compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.+'
-
-    // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-junit-adaptor
-    testCompile group: 'ru.yandex.qatools.allure', name: 'allure-junit-adaptor', version: '1.+'
-
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4
-    testCompile group: 'io.qameta.allure', name: 'allure-junit5', version: '2.+'
-
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber2-jvm
-    compile group: 'io.qameta.allure', name: 'allure-cucumber2-jvm', version: '2.+'
+    // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
+    compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.+'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
     compile group: 'io.cucumber', name: 'cucumber-java8', version: '4.+'
@@ -98,15 +88,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.+'
 
-    // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
-    compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.+'
-
     // https://mvnrepository.com/artifact/info.cukes/gherkin
     compile group: 'info.cukes', name: 'gherkin', version: '2.+'
 
-    // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-cucumber-jvm-adaptor
-    //    compile group: 'ru.yandex.qatools.allure', name: 'allure-cucumber-jvm-adaptor', version: '1.+'
-
     // https://mvnrepository.com/artifact/io.cucumber/pro-plugin
     compile group: 'io.cucumber', name: 'pro-plugin', version: '3.+'
+
+    // https://mvnrepository.com/artifact/com.github.temyers/cucumber-jvm-parallel-plugin
+    compile group: 'com.github.temyers', name: 'cucumber-jvm-parallel-plugin', version: '5.+'
 }

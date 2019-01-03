@@ -24,16 +24,20 @@ import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordi
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-        plugin = {"html:target/cucumber-report/smoketest", "json:target/cucumber.json", "pretty", "junit:target/cucumber-report/smoketest/junit.xml"},
+        plugin = {"html:target/cucumber-report/smoketest",
+                "json:target/cucumber.json",
+                "pretty"
+//                "junit:target/cucumber-report/smoketest/junit.xml"
+        },
         features = "src/test/resources/features",
-        glue = "",
+        glue = "steps",
         tags = "@demoTest"
 )
 
-public class RunnerTest {
+public class RunCucumberTest {
 
     @ClassRule
-    public static BrowserWebDriverContainer chrome = new BrowserWebDriverContainer()
+    public static BrowserWebDriverContainer chromeWebDriverContainer = new BrowserWebDriverContainer()
             .withCapabilities(new ChromeOptions())
             .withRecordingMode(RECORD_ALL, new File("target/video-test-results"));
 
@@ -42,10 +46,8 @@ public class RunnerTest {
     @BeforeClass
     public static void before() {
         Configuration.browser = Browsers.CHROME;
-        driver = chrome.getWebDriver();
+        driver = chromeWebDriverContainer.getWebDriver();
         WebDriverRunner.setWebDriver(driver);
-
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
     }
 
     @AfterClass
