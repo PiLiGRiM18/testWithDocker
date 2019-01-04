@@ -1,4 +1,4 @@
-package runner;
+package runners.demoFeatures;
 
 import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
@@ -34,12 +34,14 @@ import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordi
         tags = "@demoTest"
 )
 
-public class RunCucumberTest {
+public class RunDemoCucumberTest_2 {
 
     @ClassRule
     public static BrowserWebDriverContainer chromeWebDriverContainer = new BrowserWebDriverContainer()
             .withCapabilities(new ChromeOptions())
-            .withRecordingMode(RECORD_ALL, new File("target/video-test-results"));
+            .withRecordingMode(RECORD_ALL, new File("./build/"))
+//            .withRecordingFileFactory(getRecordingFactory())
+            ;
 
     private static RemoteWebDriver driver;
 
@@ -54,4 +56,18 @@ public class RunCucumberTest {
     public static void after() {
 //        driver.close();
     }
+
+//    private static DefaultRecordingFileFactory getRecordingFactory(){
+//        DefaultRecordingFileFactory factory = new DefaultRecordingFileFactory();
+//        File vncRecordingDirectory = null;
+//        try {
+//            vncRecordingDirectory = Files.createTempDirectory("recording").toFile();
+//        } catch (IOException e) {
+//            System.out.println(">>>>>>>>>>>>>>");
+//            e.printStackTrace();
+//        }
+//        Description description = createTestDescription(RunDemoCucumberTest_1.class.getCanonicalName(), "methodname", Test.class);
+//        factory.recordingFileForTest(vncRecordingDirectory, description, TRUE);
+//        return factory;
+//    }
 }
