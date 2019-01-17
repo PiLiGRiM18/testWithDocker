@@ -8,6 +8,7 @@ Feature: Demo feature 1
     Then the page is reloaded
     And search result is shown
     And the feature is completed
+#    And Sleep "30" seconds
 
   Scenario: Open Google and search something 1
     Given I am on the "Google" page

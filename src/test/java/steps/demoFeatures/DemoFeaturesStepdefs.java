@@ -7,6 +7,7 @@ import java.lang.management.ManagementFactory;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 /**
  * Created by Alexander Pervachuk <apervachuk@wiley.com> on 27.12.2018 16:33
@@ -42,7 +43,6 @@ public class DemoFeaturesStepdefs implements En {
             Thread thread = Thread.currentThread();
             System.out.println(">>> The feature is completed <<<" + Thread.currentThread().getId());
             System.out.println(ManagementFactory.getRuntimeMXBean().getName());
-//            sleep(2000);
         });
 
         Given("^I am on the \"([^\"]*)\" page$", (String arg0) -> {
@@ -53,6 +53,9 @@ public class DemoFeaturesStepdefs implements En {
             } else {
                 throw new cucumber.api.PendingException();
             }
+        });
+        And("^Sleep \"([^\"]*)\" seconds$", (String arg0) -> {
+            sleep(Long.parseLong(arg0) * 1000);
         });
     }
 }

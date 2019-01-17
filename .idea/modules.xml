@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/testWithDocker.iml" filepath="$PROJECT_DIR$/.idea/testWithDocker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.iml" filepath="$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.test.iml" filepath="$PROJECT_DIR$/.idea/modules/testWithDocker.testWithDocker.test.iml" />
     </modules>
   </component>
 </project>

@@ -34,7 +34,7 @@ import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordi
         tags = "@demoTest"
 )
 
-public class RunDemoCucumberTest_2 {
+public class DockerRunner {
 
     @ClassRule
     public static BrowserWebDriverContainer chromeWebDriverContainer = new BrowserWebDriverContainer()
@@ -56,18 +56,4 @@ public class RunDemoCucumberTest_2 {
     public static void after() {
 //        driver.close();
     }
-
-//    private static DefaultRecordingFileFactory getRecordingFactory(){
-//        DefaultRecordingFileFactory factory = new DefaultRecordingFileFactory();
-//        File vncRecordingDirectory = null;
-//        try {
-//            vncRecordingDirectory = Files.createTempDirectory("recording").toFile();
-//        } catch (IOException e) {
-//            System.out.println(">>>>>>>>>>>>>>");
-//            e.printStackTrace();
-//        }
-//        Description description = createTestDescription(RunDemoCucumberTest_1.class.getCanonicalName(), "methodname", Test.class);
-//        factory.recordingFileForTest(vncRecordingDirectory, description, TRUE);
-//        return factory;
-//    }
 }

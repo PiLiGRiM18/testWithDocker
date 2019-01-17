@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cucumber:pro-plugin:3.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/pro-plugin/3.0.2/905b1a52737c28fba8c9be1bae1f05ce8709d4ea/pro-plugin-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/pro-plugin/3.0.2/673555d14f742d8aba6d71811310d17cc1111ad4/pro-plugin-3.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

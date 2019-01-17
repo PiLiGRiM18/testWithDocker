@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.testcontainers:selenium:1.10.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testcontainers/selenium/1.10.5/bdee1fe5eb11e7716149862a6e3fe9693f68261b/selenium-1.10.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testcontainers/selenium/1.10.5/1b28360c2d657893dfa5f8ba2293a1d9fdb109a3/selenium-1.10.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

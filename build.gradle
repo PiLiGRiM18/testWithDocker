@@ -50,6 +50,7 @@ dependencies {
     testImplementation(
             'org.junit.jupiter:junit-jupiter-api:5.+'
     )
+    
     testRuntimeOnly(
             'org.junit.jupiter:junit-jupiter-engine:5.+',
             'org.junit.vintage:junit-vintage-engine:5.+'
@@ -85,10 +86,10 @@ dependencies {
     compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.+'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
-    compile group: 'io.cucumber', name: 'cucumber-java8', version: '4.+'
+    compile group: 'io.cucumber', name: 'cucumber-java8', version: '4.2.0'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.+'
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.2.0'
 
     // https://mvnrepository.com/artifact/info.cukes/gherkin
     compile group: 'info.cukes', name: 'gherkin', version: '2.+'
