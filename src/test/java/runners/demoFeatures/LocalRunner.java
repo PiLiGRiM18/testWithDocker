@@ -2,7 +2,6 @@ package runners.demoFeatures;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 /**
@@ -23,8 +22,4 @@ import org.junit.runner.RunWith;
 )
 
 public class LocalRunner {
-    @AfterClass
-    public static void after() {
-        System.out.println();
-    }
 }
