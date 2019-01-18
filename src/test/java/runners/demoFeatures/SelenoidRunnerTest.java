@@ -29,7 +29,7 @@ import java.net.URL;
         tags = "@demoTest"
 )
 
-public class SelenoidRunner {
+public class SelenoidRunnerTest {
     private static RemoteWebDriver driver;
 
     @BeforeClass

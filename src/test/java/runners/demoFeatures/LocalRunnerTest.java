@@ -2,6 +2,10 @@ package runners.demoFeatures;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Rule;
+import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 
 /**
@@ -21,5 +25,23 @@ import org.junit.runner.RunWith;
         tags = "@demoTest"
 )
 
-public class LocalRunner {
+public class LocalRunnerTest {
+        @Rule
+        static
+        TestName name = new TestName();
+
+        @BeforeClass
+        public static void beforeClass() {
+                System.out.println();
+        }
+
+        @AfterClass
+        public static void afterClass() {
+                System.out.println(name.getMethodName());
+        }
+
+//        @After
+//        public static void after(){
+//                System.out.println();
+//        }
 }

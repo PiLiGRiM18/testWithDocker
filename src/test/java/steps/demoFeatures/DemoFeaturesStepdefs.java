@@ -46,14 +46,17 @@ public class DemoFeaturesStepdefs implements En {
         });
 
         Given("^I am on the \"([^\"]*)\" page$", (String arg0) -> {
-            if (arg0.equalsIgnoreCase("Wikipedia")) {
-                page.openPage("https://www.wikipedia.org/");
-            } else if (arg0.equalsIgnoreCase("Google")) {
-                page.openPage("https://www.google.com/");
-            } else {
-                throw new cucumber.api.PendingException();
-            }
+            page.openPage(arg0);
+
+//            if (arg0.equalsIgnoreCase("Wikipedia")) {
+//                page.openPage("https://www.wikipedia.org/");
+//            } else if (arg0.equalsIgnoreCase("Google")) {
+//                page.openPage("https://www.google.com/");
+//            } else {
+//                throw new cucumber.api.PendingException();
+//            }
         });
+
         And("^Sleep \"([^\"]*)\" seconds$", (String arg0) -> {
             sleep(Long.parseLong(arg0) * 1000);
         });

@@ -31,10 +31,11 @@ import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordi
         },
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@demoTest"
+        tags = "@demoTest",
+        junit = ""
 )
 
-public class DockerRunner {
+public class DockerRunnerTest {
 
     @ClassRule
     public static BrowserWebDriverContainer chromeWebDriverContainer = new BrowserWebDriverContainer()
